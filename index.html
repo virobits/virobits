@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VIROBITS - Desarrollo Web Freelance para Pymes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      :root {
+        --azul: #0077ff;
+        --turquesa: #00c2b8;
+        --negro: #0b0c10;
+        --gris-oscuro: #1f2833;
+        --naranja: #ff7b00;
+        --blanco: #f9f9f9;
+      }
+
+      body {
+        background-color: var(--gris-oscuro);
+        color: var(--blanco);
+        font-family: 'Inter', sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      header {
+        background-color: var(--negro);
+        border-bottom: 3px solid var(--turquesa);
+      }
+
+      .navbar-brand {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--turquesa) !important;
+        letter-spacing: 1px;
+      }
+
+      .nav-link {
+        color: var(--blanco) !important;
+        font-weight: 500;
+      }
+
+      .nav-link:hover {
+        color: var(--naranja) !important;
+      }
+
+      /* Hero */
+      .hero {
+        text-align: center;
+        padding: 6rem 1rem;
+        background: linear-gradient(135deg, var(--negro), var(--azul));
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--turquesa);
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        color: var(--blanco);
+        opacity: 0.9;
+      }
+
+      .hero .btn {
+        background-color: var(--naranja);
+        color: var(--negro);
+        border: none;
+        font-weight: 600;
+        padding: 0.8rem 2rem;
+        border-radius: 8px;
+        margin-top: 1.5rem;
+        transition: all 0.3s;
+      }
+
+      .hero .btn:hover {
+        background-color: var(--turquesa);
+        color: var(--blanco);
+      }
+
+      /* Secciones */
+      section {
+        padding: 5rem 0;
+      }
+
+      h2.section-title {
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 3rem;
+        color: var(--turquesa);
+      }
+
+      /* Servicios */
+      #servicios {
+        background-color: var(--negro);
+      }
+
+      .service-card {
+        background-color: #141a1f;
+        border: 1px solid var(--azul);
+        border-radius: 12px;
+        padding: 2rem;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .service-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      }
+
+      .service-card h5 {
+        color: var(--naranja);
+        margin-top: 1rem;
+        font-weight: 600;
+      }
+
+      /* Portfolio */
+      .project-card {
+        background-color: #141a1f;
+        border: 1px solid var(--turquesa);
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .project-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      }
+
+      .project-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .project-card .card-body {
+        padding: 1.5rem;
+      }
+
+      /* Contacto */
+      #contacto input, #contacto textarea {
+        border-radius: 6px;
+        border: 1px solid var(--turquesa);
+        padding: 0.75rem;
+        width: 100%;
+        background-color: #0e1114;
+        color: var(--blanco);
+      }
+
+      #contacto button {
+        background-color: var(--naranja);
+        color: var(--negro);
+        border: none;
+        padding: 0.75rem;
+        width: 100%;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
+
+      #contacto button:hover {
+        background-color: var(--turquesa);
+        color: var(--blanco);
+      }
+
+      footer {
+        background-color: var(--negro);
+        color: var(--blanco);
+        padding: 2rem 0;
+        text-align: center;
+        border-top: 3px solid var(--turquesa);
+      }
+
+      footer a {
+        color: var(--naranja);
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+        color: var(--turquesa);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">VIROBITS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="#sobre">Sobre mí</a></li>
+              <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+              <li class="nav-item"><a class="nav-link" href="#portfolio">Proyectos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1>Desarrollo Web para Empresas del Futuro</h1>
+        <p>Soluciones digitales modernas, seguras y optimizadas para pequeñas y medianas empresas.</p>
+        <a href="#contacto" class="btn">Solicita tu presupuesto</a>
+      </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="sobre">
+      <div class="container text-center">
+        <h2 class="section-title">Sobre VIROBITS</h2>
+        <p class="mx-auto" style="max-width: 700px;">
+          Soy un desarrollador web freelance especializado en crear sitios web rápidos, visualmente atractivos y orientados a resultados. 
+          Mi objetivo es ayudar a pequeñas y medianas empresas a destacar en internet con una presencia profesional y eficaz.
+        </p>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios">
+      <div class="container">
+        <h2 class="section-title">Servicios</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="service-card">
+              <h5>Diseño y Desarrollo Web</h5>
+              <p>Creación de sitios modernos, adaptativos y optimizados para todo tipo de dispositivos.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-card">
+              <h5>SEO y Optimización</h5>
+              <p>Posicionamiento orgánico y mejora del rendimiento web para atraer más clientes.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-card">
+              <h5>Mantenimiento y Soporte</h5>
+              <p>Gestión técnica, actualizaciones y soporte continuo para tu sitio web.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio">
+      <div class="container">
+        <h2 class="section-title">Proyectos Recientes</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="project-card">
+              <img src="img/project1.jpg" alt="Proyecto web 1">
+              <div class="card-body">
+                <h5 class="text-turquesa">E-commerce Moderno</h5>
+                <p>Diseño y desarrollo de tienda online optimizada para ventas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="project-card">
+              <img src="img/project2.jpg" alt="Proyecto web 2">
+              <div class="card-body">
+                <h5 class="text-turquesa">Web Corporativa</h5>
+                <p>Plataforma profesional para presencia digital de empresa de servicios.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="project-card">
+              <img src="img/project3.jpg" alt="Proyecto web 3">
+              <div class="card-body">
+                <h5 class="text-turquesa">Landing Page</h5>
+                <p>Página de captación optimizada para campañas publicitarias.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+      <div class="container">
+        <h2 class="section-title">Contacto</h2>
+        <form class="mx-auto" style="max-width: 500px;" action="#" method="post">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          </div>
+
+          <button type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p class="mb-1"><strong>VIROBITS</strong> · Desarrollador Web Freelance</p>
+        <p class="mb-1">Email: <a href="mailto:info@virobits.com">info@virobits.com</a> · Web: <a href="https://virobits.com">virobits.com</a></p>
+        <p>Sígueme en 
+          <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> · 
+          <a href="https://www.github.com" target="_blank">GitHub</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
